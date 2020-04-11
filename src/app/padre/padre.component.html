@@ -1,0 +1,36 @@
+
+<p>{{recibirMensaje}}<p>
+<p>{{personas.nombre}} {{personas.apellido}}</p>
+
+<div class="ui-g">
+    <div class="ui-g-12 ui-md-6 ui-lg-3">
+        <span class="ui-float-label">
+            <input id="float-input" type="text" size="30"  [(ngModel)]="personas.nombre"> 
+            <label for="float-input">nombre</label>
+        </span>
+    </div>
+    <div class="ui-g-12 ui-md-6 ui-lg-3"><span class="ui-float-label">
+    <input id="float-input" type="text" size="30"  [(ngModel)]="personas.edad"> 
+    <label for="float-input">edad</label>
+</span>
+ </div>
+    <div class="ui-g-12 ui-md-6 ui-lg-3"><span class="ui-float-label">
+        <input id="float-input" type="text" size="30"  [(ngModel)]="personas.apellido"> 
+        <label for="float-input">apellido</label>
+    </span>
+</div>
+    
+    <div class="ui-g-12 ui-md-6 ui-lg-3"><button pButton type="button" label="enviar" class="ui-button-raised ui-button-danger"(click)=' mostrarDatos()' ></button></div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+<app-hijo [recibirPadre]="enviarHijo" (enviarMensaje)='recibir($event)' ></app-hijo>
