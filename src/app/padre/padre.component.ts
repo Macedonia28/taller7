@@ -7,11 +7,14 @@ import { Personas } from '../dto/personas';
   styleUrls: ['./padre.component.css']
 })
 export class PadreComponent implements OnInit {
-  public enviarHijo:string;
+  public enviarHijo:Personas;
   public recibirMensaje:string;
   personas:Personas=new Personas();
+ 
 
-  constructor() { }
+  constructor() { 
+    
+  }
 
   ngOnInit(): void {
   }
@@ -21,11 +24,15 @@ export class PadreComponent implements OnInit {
   }
 
   public mostrarDatos():void{
-   this.enviarHijo="soy tu padre";
-   
+   console.log(this.personas);
+   this.enviarHijo=this.personas;
+   delete this.personas;
+   this.personas=new Personas();
+
 }
 
 public mostrar():void{
-  this.personas.nombre;
+  this.personas.userName;
+ 
 }
 }

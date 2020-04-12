@@ -1,8 +1,10 @@
 
 
 export class Personas{
-    public nombre:string;
-    public apellido:string;
-    public edad:string;
+    public id:string;
+    public userName:string;
+    public password:string;
+    public name:string;
+    public email:string;
 
 }

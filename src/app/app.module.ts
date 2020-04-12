@@ -10,6 +10,10 @@ import{FormsModule} from '@angular/forms';
 import {PasswordModule} from 'primeng/password';
 import {InputTextModule} from 'primeng/inputtext';
 
+import {TableModule} from 'primeng/table';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +26,8 @@ import {InputTextModule} from 'primeng/inputtext';
     ButtonModule,
     FormsModule,
     PasswordModule,
-    InputTextModule
+    InputTextModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

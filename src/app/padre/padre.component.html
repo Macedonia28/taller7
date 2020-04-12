@@ -1,27 +1,44 @@
 
 <p>{{recibirMensaje}}<p>
-<p>{{personas.nombre}} {{personas.apellido}}</p>
 
 <div class="ui-g">
     <div class="ui-g-12 ui-md-6 ui-lg-3">
         <span class="ui-float-label">
-            <input id="float-input" type="text" size="30"  [(ngModel)]="personas.nombre"> 
-            <label for="float-input">nombre</label>
+            <input id="float-input" type="text" size="30"  [(ngModel)]="personas.id"> 
+            <label for="float-input">id</label>
         </span>
     </div>
-    <div class="ui-g-12 ui-md-6 ui-lg-3"><span class="ui-float-label">
-    <input id="float-input" type="text" size="30"  [(ngModel)]="personas.edad"> 
-    <label for="float-input">edad</label>
+    <div class="ui-g-12 ui-md-6 ui-lg-3">
+        <span class="ui-float-label">
+    <input id="float-input" type="text" size="30"  [(ngModel)]="personas.userName"> 
+    <label for="float-input">userName</label>
 </span>
  </div>
-    <div class="ui-g-12 ui-md-6 ui-lg-3"><span class="ui-float-label">
-        <input id="float-input" type="text" size="30"  [(ngModel)]="personas.apellido"> 
-        <label for="float-input">apellido</label>
+    <div class="ui-g-12 ui-md-6 ui-lg-3">
+        <span class="ui-float-label">
+        <input id="float-input" type="text" size="30"  [(ngModel)]="personas.password"> 
+        <label for="float-input">password</label>
     </span>
 </div>
-    
+<div class="ui-g-12 ui-md-6 ui-lg-3">
+    <span class="ui-float-label">
+        <input id="float-input" type="text" size="30"  [(ngModel)]="personas.name"> 
+        <label for="float-input">name</label>
+    </span>
+</div>
+
+<div class="ui-g-12 ui-md-6 ui-lg-3">
+    <span class="ui-float-label">
+        <input id="float-input" type="text" size="30"  [(ngModel)]="personas.email"> 
+        <label for="float-input">email</label>
+    </span>
+</div>
+
+<div class="ui-g-12 ui-md-6 ui-lg-3">
     <div class="ui-g-12 ui-md-6 ui-lg-3"><button pButton type="button" label="enviar" class="ui-button-raised ui-button-danger"(click)=' mostrarDatos()' ></button></div>
     
+    
+</div>
 </div>
 
 
@@ -32,5 +49,4 @@
 
 
 
-
-<app-hijo [recibirPadre]="enviarHijo" (enviarMensaje)='recibir($event)' ></app-hijo>
+<app-hijo [recibirPadre]=" enviarHijo" (enviarMensaje)='recibir($event)' ></app-hijo>
